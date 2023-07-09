@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Levels/LevelTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Components/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/WinBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Components/Elevator/Elevator.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/CodeEditor.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Levels/LevelCamera.tscn" type="PackedScene" id=6]
 
 [node name="LevelPlatfrom" type="Node2D"]
 
@@ -17,11 +18,12 @@ tile_data = PoolIntArray( 0, 6, 0, 1, 6, 0, 2, 6, 0, 3, 6, 0, 4, 6, 0, 5, 6, 0, 
 
 [node name="WinBox" parent="." instance=ExtResource( 3 )]
 position = Vector2( 810, 97 )
+scene = ExtResource( 6 )
 
 [node name="Elevator" parent="." instance=ExtResource( 4 )]
 position = Vector2( 384, 336 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 298, 290 )
+position = Vector2( 294, 120 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 5 )]

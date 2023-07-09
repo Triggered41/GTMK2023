@@ -13,7 +13,7 @@ func _physics_process(delta):
 func run_code(data):
 	if data.has("focal_length"):
 		t.start()
-		get_node("Light2D").scale = Vector2.ONE*data.focal_length
+		get_node("Light2D").scale = Vector2.ONE*float(data.focal_length)
 
 
 func _on_Timer_timeout():

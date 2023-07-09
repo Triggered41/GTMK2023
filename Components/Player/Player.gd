@@ -20,7 +20,7 @@ func _physics_process(delta):
 		img.flip_h = false
 	elif vel.x < 0:
 		img.flip_h = true
-	vel.y = 9.8
+	vel.y = 1.0
 	vel = move_and_slide(vel*speed)
 	
 	if Input.is_action_just_released("alt"):

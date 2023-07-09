@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Levels/LevelTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Components/Player/Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Assets/Tag70.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Tag65.png" type="Texture" id=7]
 [ext_resource path="res://Assets/WinBox.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Levels/LevelPlatfrom.tscn" type="PackedScene" id=9]
 
 [node name="LevelDoor" type="Node2D"]
 
@@ -47,3 +48,4 @@ visible = false
 
 [node name="WinBox" parent="." instance=ExtResource( 8 )]
 position = Vector2( 909, 435 )
+scene = ExtResource( 9 )

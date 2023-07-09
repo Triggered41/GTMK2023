@@ -7,7 +7,7 @@
 
 [node name="StaticBody2D" type="StaticBody2D"]
 script = ExtResource( 1 )
-valid_lines = Vector2( 4, 4 )
+valid_lines = Vector2( 3, 3 )
 code = "# Change focal length to zero by setting the variable focal_length to zero
 
 # CODE START
