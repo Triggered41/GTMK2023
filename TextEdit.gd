@@ -8,6 +8,7 @@ var lines = 0
 export(Vector2) var valid_lines
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	hide()
 	lines = get_line_count()
 	add_keyword_color("var", Color("FF8888"))
 	

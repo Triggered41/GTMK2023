@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Levels/LevelTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Components/Player/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,14 @@
 [ext_resource path="res://Assets/Tag65.png" type="Texture" id=7]
 [ext_resource path="res://Assets/WinBox.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Levels/LevelPlatfrom.tscn" type="PackedScene" id=9]
+[ext_resource path="res://dogica.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Pillar.png" type="Texture" id=11]
+[ext_resource path="res://Spot.png" type="Texture" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+extra_spacing_bottom = 9
+font_data = ExtResource( 10 )
 
 [node name="LevelDoor" type="Node2D"]
 
@@ -43,8 +51,63 @@ scale = Vector2( 2.1875, 2.1875 )
 texture = ExtResource( 7 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 131, 382 )
+position = Vector2( 270, 417 )
 
 [node name="WinBox" parent="." instance=ExtResource( 8 )]
 position = Vector2( 909, 435 )
 scene = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 296.0
+margin_top = 389.0
+margin_right = 426.0
+margin_bottom = 422.0
+custom_colors/font_color = Color( 0.945098, 0.054902, 0.054902, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Go Near Door to Hack it"
+autowrap = true
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 512.0
+margin_top = 389.0
+margin_right = 642.0
+margin_bottom = 422.0
+custom_colors/font_color = Color( 0.945098, 0.054902, 0.054902, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Press left ALT
+to toggle Screen"
+autowrap = true
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 732.0
+margin_top = 389.0
+margin_right = 877.0
+margin_bottom = 422.0
+custom_colors/font_color = Color( 0.945098, 0.054902, 0.054902, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Go into the portal to advance"
+autowrap = true
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 672.0
+margin_top = 460.0
+margin_right = 709.0
+margin_bottom = 475.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "DOOR"
+autowrap = true
+
+[node name="Pillar" type="Sprite" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 372.858, 413.315 )
+rotation = 1.57079
+scale = Vector2( 0.290827, 0.930628 )
+texture = ExtResource( 11 )
+
+[node name="Spot" type="Sprite" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 400, 413 )
+rotation = 1.57079
+scale = Vector2( 0.0545906, 0.0545906 )
+texture = ExtResource( 12 )

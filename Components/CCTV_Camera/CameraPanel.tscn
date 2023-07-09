@@ -11,7 +11,7 @@ valid_lines = Vector2( 3, 3 )
 code = "# Change focal length to zero by setting the variable focal_length to zero
 
 # CODE START
-
+focal_length = 1.0
 # CODE END"
 answers = {
 "focal_length": 0.0

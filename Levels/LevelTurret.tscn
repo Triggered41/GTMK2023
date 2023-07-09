@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Levels/LevelTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Components/Player/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,13 @@
 [ext_resource path="res://Components/Turret/Turret.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Components/Elevator/Elevator.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/WinBox.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Levels/Level1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://dogica.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+extra_spacing_bottom = 9
+font_data = ExtResource( 8 )
 
 [node name="LevelTurret" type="Node2D"]
 
@@ -26,9 +33,31 @@ position = Vector2( 501, 306 )
 collision_mask = 7
 
 [node name="WinBox" parent="." instance=ExtResource( 6 )]
-position = Vector2( 400, 299 )
+position = Vector2( 460, 300 )
+scene = ExtResource( 7 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 240, 285 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 173.0
+margin_top = 266.0
+margin_right = 303.0
+margin_bottom = 299.0
+custom_colors/font_color = Color( 0.945098, 0.054902, 0.054902, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "The turret will kill you
+Use the Platform to go UP!"
+autowrap = true
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 525.0
+margin_top = 258.0
+margin_right = 671.0
+margin_bottom = 330.0
+custom_colors/font_color = Color( 0.945098, 0.054902, 0.054902, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Change the target of the turret so that it does not shoot you"
+autowrap = true

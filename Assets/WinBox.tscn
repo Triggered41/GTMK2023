@@ -10,6 +10,7 @@ extents = Vector2( 16, 32 )
 script = ExtResource( 2 )
 
 [node name="WinDoor" type="Sprite" parent="."]
+z_index = 9
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -28,4 +28,5 @@ func _physics_process(delta):
 		code_editor.cursor_set_line(code_editor.valid_lines.x)
 
 func damage():
+	get_tree().reload_current_scene()
 	print("Hit Player")

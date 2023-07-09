@@ -31,8 +31,7 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/word_highlighted_color = Color( 0.117647, 0.196078, 0.741176, 1 )
 custom_constants/line_spacing = 10
 custom_fonts/font = SubResource( 4 )
-text = "#HELLO
-#HOLA"
+text = "# Hello Player :)"
 highlight_current_line = true
 syntax_highlighting = true
 show_line_numbers = true
