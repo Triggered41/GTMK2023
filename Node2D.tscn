@@ -17,12 +17,16 @@ tile_data = PoolIntArray( 65521, 6, 0, 65522, 6, 0, 65523, 6, 0, 65524, 6, 0, 65
 
 [node name="Turret" parent="." instance=ExtResource( 5 )]
 position = Vector2( 478, 235 )
+answers = {
+"target": "Soldier"
+}
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 384, 232 )
 
 [node name="Door" parent="." instance=ExtResource( 3 )]
 position = Vector2( 293, 220 )
+valid_lines = Vector2( 1, 1 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 2 )]
 

@@ -30,12 +30,13 @@ func attack():
 			timer.start()
 
 func shoot():
-	if can_shoot and ray.get_collider().is_in_group(target):
-		var target_obj = get_tree().get_nodes_in_group(target)[0]
-		var i = bullet.instance()
-		get_tree().root.add_child(i)
-		i.global_position = global_position
-		i.rotation = (target_obj.global_position - global_position).angle()
+	if can_shoot and ray.is_colliding():
+		if ray.get_collider().is_in_group(target):
+			var target_obj = get_tree().get_nodes_in_group(target)[0]
+			var i = bullet.instance()
+			get_tree().root.add_child(i)
+			i.global_position = global_position
+			i.rotation = (target_obj.global_position - global_position).angle()
 
 
 func _on_Timer_timeout():

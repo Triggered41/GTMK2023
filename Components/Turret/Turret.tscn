@@ -7,11 +7,12 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 
-[node name="Turret" type="StaticBody2D"]
+[node name="Turret" type="StaticBody2D" groups=["Turret"]]
 script = ExtResource( 2 )
-valid_lines = Vector2( 1, 1 )
-code = "# CODE START
-
+valid_lines = Vector2( 2, 2 )
+code = "#Change target (Soldier, Player, Turret)
+# CODE START
+target = Player
 #CODE END"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

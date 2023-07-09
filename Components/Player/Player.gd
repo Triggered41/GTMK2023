@@ -15,7 +15,6 @@ func _physics_process(delta):
 	if Input.is_action_just_released("restart"):
 		get_tree().reload_current_scene()
 	
-	
 	vel.x = Input.get_axis("ui_left", "ui_right")
 	if vel.x > 0:
 		img.flip_h = false

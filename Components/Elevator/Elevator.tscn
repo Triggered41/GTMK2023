@@ -9,14 +9,23 @@ extents = Vector2( 32, 3.5 )
 
 [node name="Elevator" type="StaticBody2D"]
 script = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 3.5 )
-shape = SubResource( 1 )
+valid_lines = Vector2( 1, 2 )
+code = "# CODE START
+positionX = 0
+positionY = 0
+#CODE END"
+answers = {
+"positionX": 0.0,
+"positionY": 0.0
+}
 
 [node name="Icon" type="Sprite" parent="."]
 scale = Vector2( 2.01072, 0.691185 )
 texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 3.5 )
+shape = SubResource( 1 )
 
 [node name="CommandObject" type="Node2D" parent="."]
 script = ExtResource( 3 )

@@ -1,13 +1,22 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://TextEdit.gd" type="Script" id=1]
 [ext_resource path="res://dogica.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/reload.png" type="Texture" id=3]
+[ext_resource path="res://GroundPlatform.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=4]
 size = 18
 font_data = ExtResource( 2 )
 
 [node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="GroundPlatform" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 90, 81 )
+scale = Vector2( 2.9375, 2.79063 )
+texture = ExtResource( 4 )
 
 [node name="CodeEditor" type="TextEdit" parent="."]
 unique_name_in_owner = true
@@ -38,6 +47,13 @@ anchor_bottom = 1.0
 margin_top = -49.0
 disabled = true
 text = "RUN"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 50, 43 )
+scale = Vector2( 0.253333, 0.253333 )
+normal = ExtResource( 3 )
+action = "restart"
 
 [connection signal="cursor_changed" from="CodeEditor" to="CodeEditor" method="_on_TextEdit_cursor_changed"]
 [connection signal="text_changed" from="CodeEditor" to="CodeEditor" method="_on_TextEdit_text_changed"]
