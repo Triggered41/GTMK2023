@@ -37,7 +37,7 @@ position = Vector2( 460, 300 )
 scene = ExtResource( 7 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 240, 285 )
+position = Vector2( 232, 283 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
 

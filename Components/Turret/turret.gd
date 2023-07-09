@@ -3,6 +3,7 @@ extends Node2D
 export var length = 100.0
 export(PackedScene) var bullet:PackedScene
  
+onready var icon = $Cone
 onready var ray:RayCast2D = $RayCast2D
 onready var timer:Timer = $Timer
 
@@ -14,6 +15,8 @@ func run_code(data):
 	get_parent().get_node("CollisionShape2D").disabled = true
 	if data.has("target"):
 		target = data.target
+		if target != "Player":
+			icon.modulate.a /= 2
 
 func _ready():
 	ray.set_as_toplevel(true)

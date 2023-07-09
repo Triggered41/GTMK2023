@@ -56,3 +56,13 @@ custom_colors/font_color = Color( 0.945098, 0.054902, 0.054902, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "GreenBox can be used to hack camera"
 autowrap = true
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 151.0
+margin_top = 106.0
+margin_right = 341.0
+margin_bottom = 161.0
+custom_colors/font_color = Color( 0.945098, 0.054902, 0.054902, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Camera will reset after 5 seconds be quick"
+autowrap = true

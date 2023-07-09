@@ -23,11 +23,6 @@ answers = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="Cone" type="Sprite" parent="."]
-position = Vector2( -3.57628e-07, -1.19209e-07 )
-scale = Vector2( 0.5625, 0.488052 )
-texture = ExtResource( 4 )
-
 [node name="CommandObject" type="Node2D" parent="."]
 script = ExtResource( 3 )
 bullet = ExtResource( 1 )
@@ -39,6 +34,11 @@ collision_mask = 2
 
 [node name="Timer" type="Timer" parent="CommandObject"]
 wait_time = 0.8
+
+[node name="Cone" type="Sprite" parent="CommandObject"]
+position = Vector2( -3.57628e-07, -1.19209e-07 )
+scale = Vector2( 0.5625, 0.488052 )
+texture = ExtResource( 4 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
