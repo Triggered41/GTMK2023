@@ -11,6 +11,7 @@ var target = "Player" #["PLAYER", "TURRET", "SOLDIER"]
 var can_shoot = false
 
 func run_code(data):
+	get_parent().get_node("CollisionShape2D").disabled = true
 	if data.has("target"):
 		target = data.target
 
@@ -21,8 +22,9 @@ func _ready():
 func _physics_process(delta):
 	attack()
 	
-	var t = get_tree().get_nodes_in_group(target)[0]
-	ray.cast_to = t.global_position - global_position
+	if get_tree().has_group(target):
+		var t = get_tree().get_nodes_in_group(target)[0]
+		ray.cast_to = t.global_position - global_position
 
 func attack():
 	if get_tree().get_nodes_in_group(target) != []:

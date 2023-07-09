@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Levels/LevelTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Components/Player/Player.tscn" type="PackedScene" id=2]
@@ -6,8 +6,11 @@
 [ext_resource path="res://Components/CCTV_Camera/CCTVCamera.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Components/CCTV_Camera/CameraPanel.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/WinBox.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Levels/LevelTurret.tscn" type="PackedScene" id=7]
 
 [node name="LevelCamera" type="Node2D"]
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -18,8 +21,6 @@ tile_data = PoolIntArray( -3, 6, 0, -2, 6, 0, -1, 6, 0, -65536, 6, 0, -65535, 6,
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 50, 146 )
 
-[node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
-
 [node name="StaticBody2D" parent="." instance=ExtResource( 5 )]
 position = Vector2( 114, 104 )
 
@@ -28,3 +29,4 @@ position = Vector2( 159, -185 )
 
 [node name="WinBox" parent="." instance=ExtResource( 6 )]
 position = Vector2( 519, 152 )
+scene = ExtResource( 7 )

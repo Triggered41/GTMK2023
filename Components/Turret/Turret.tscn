@@ -8,12 +8,17 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 [node name="Turret" type="StaticBody2D" groups=["Turret"]]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource( 2 )
 valid_lines = Vector2( 2, 2 )
 code = "#Change target (Soldier, Player, Turret)
 # CODE START
 target = Player
 #CODE END"
+answers = {
+"target": null
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -41,7 +46,13 @@ wait_time = 2.0
 position = Vector2( 0, -1 )
 rotation = 1.57079
 scale = Vector2( 1, 1.63426 )
-polygon = PoolVector2Array( 0, 0, -24, 54, 25, 54 )
+polygon = PoolVector2Array( 0, 0, -47.0009, 89.3369, 37.9991, 89.9491 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 0.670449, -3.8 )
+scale = Vector2( 1.67045, 1.7 )
+color = Color( 1, 0, 0, 0.447059 )
+polygon = PoolVector2Array( -89, -26, -0.401357, 1.64706, -88, 24 )
 
 [connection signal="timeout" from="CommandObject/Timer" to="CommandObject" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="CommandObject" method="_on_Area2D_body_entered"]

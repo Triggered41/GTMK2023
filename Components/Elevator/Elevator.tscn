@@ -8,6 +8,7 @@
 extents = Vector2( 32, 3.5 )
 
 [node name="Elevator" type="StaticBody2D"]
+collision_layer = 2
 script = ExtResource( 2 )
 valid_lines = Vector2( 1, 2 )
 code = "# CODE START
