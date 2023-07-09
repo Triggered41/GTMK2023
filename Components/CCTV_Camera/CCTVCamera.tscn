@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Spot.png" type="Texture" id=1]
+[ext_resource path="res://Components/CCTV_Camera/CCTVCamera.gd" type="Script" id=3]
+
+[node name="CommandObject" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 8, 22 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, 150 )
+texture_scale = 0.45
+color = Color( 1, 0, 0, 0.235294 )
+mode = 2
+
+[node name="Rays" type="Node2D" parent="."]
+
+[node name="RayCast2D" type="RayCast2D" parent="Rays"]
+enabled = true
+cast_to = Vector2( -84, 332 )
+
+[node name="RayCast2D2" type="RayCast2D" parent="Rays"]
+enabled = true
+cast_to = Vector2( 0, 332 )
+
+[node name="RayCast2D3" type="RayCast2D" parent="Rays"]
+enabled = true
+cast_to = Vector2( 84, 332 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

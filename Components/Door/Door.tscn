@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Code.gd" type="Script" id=1]
+[ext_resource path="res://Components/Door/Door.gd" type="Script" id=2]
+[ext_resource path="res://Components/Door/Door (1).png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 30, 55.5 )
+
+[node name="Door" type="StaticBody2D"]
+scale = Vector2( 0.5, 1 )
+script = ExtResource( 1 )
+code = "# CODE START
+IsDoorOpen = False
+# CODE END"
+answers = {
+"IsDoorOpen": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="CommandObject" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Door(1)" type="Sprite" parent="."]
+scale = Vector2( 3.375, 3.375 )
+texture = ExtResource( 3 )

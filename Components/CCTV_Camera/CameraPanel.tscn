@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Code.gd" type="Script" id=1]
+[ext_resource path="res://Components/CCTV_Camera/CamBox.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource( 1 )
+valid_lines = Vector2( 4, 4 )
+code = "# Change focal length to zero by setting the variable focal_length to zero
+
+# CODE START
+
+# CODE END"
+answers = {
+"focal_length": 0.0
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Cross" type="Sprite" parent="."]
+scale = Vector2( 1.125, 1.125 )
+texture = ExtResource( 2 )
